@@ -20,7 +20,8 @@ class SearchBar extends React.Component {
 
     return(
       <form className="search-form" onSubmit={this.handleSubmit}>
-        <Input className="search-bar" variant="filled" type="text" placeholder="Search Username..." />
+        <Input className="search-bar" variant="filled" type="text" placeholder="Search Username..."
+          style={{marginTop: "8%", width: "400px"}}/>
       </form>
     )
 
