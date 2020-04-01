@@ -2,29 +2,44 @@ import React from 'react'
 
 class Repos extends React.Component {
 
-  getRepos = (url) => {
-    fetch(url)
-    .then(resp => resp.json())
-    .then(repos => {
-      return repos.map(repo => this.showRepo(repo))  
-    })
-  }
+  // state = {
+  //   reposArr: []
+  // }
 
-  showRepo = (repo) => {
-    // debugger
-    return (
-      <div> 
-        <a href={repo.html_url}>
-          <label> {repo.name} </label>
-        </a>
-      </div>
-    )
-  }
+  // getRepos = (url) => {
+  //   fetch(url)
+  //   .then(resp => resp.json())
+  //   .then(repos => {
+  //     this.setState({reposArr: repos})
+  //    })
+  // }
+
+  // showRepos = (repos) => {
+  //   // console.log("ShowRepo", repo)
+  //   this.state.reposArr.map ( repo => {
+  //     return (
+  //       <div> 
+  //         <label> {repo.name} </label>
+  //         <a href={repo.html_url}> Test </a>
+  //       </div>
+  //     )
+  //   })
+  // }
+
 
   render() {
     return(
-      <div>
-        {this.getRepos(this.props.reposUrl)}
+      // <div id="Repositories">
+      //   {this.getRepos(this.props.reposUrl)}
+      //   {/* {
+      //     this.state.reposArr.length > 0 
+      //     ? this.showRepos(this.state.reposArr)
+      //     : null
+      //   } */}
+      // </div>
+
+      <div> 
+        <h4> Number of Repositories: {this.props.numRepos}</h4>
       </div>
     )
   }

@@ -28,7 +28,7 @@ class Profile extends React.Component {
         <SocialInfo
           followers={this.props.user.followers}
           following={this.props.user.following}/>
-        <Repos reposUrl={this.props.user.repos_url}/>
+        <Repos numRepos={this.props.user.public_repos}/>
       </Card>
     )
   }
