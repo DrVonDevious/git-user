@@ -6,6 +6,7 @@ class SearchBar extends React.Component {
     fetch("https://api.github.com/users/" + username)
       .then(res => res.json())
       .then(user => {
+        this.props.onSearch(user)
       })
   }
 
@@ -17,7 +18,7 @@ class SearchBar extends React.Component {
   render() {
 
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form className="search-form" onSubmit={this.handleSubmit}>
         <input type="text" placeholder="Search Username..." />
       </form>
     )

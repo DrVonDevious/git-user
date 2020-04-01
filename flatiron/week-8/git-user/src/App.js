@@ -8,7 +8,7 @@ import Profile from './components/Profile.js'
 function App() {
   return (
     <div className="App">
-      <SearchBar />
+      <SearchBar onSearch={(user) => {console.log(user)}}/>
       <Profile />
     </div>
   );
