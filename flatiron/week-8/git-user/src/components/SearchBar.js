@@ -1,4 +1,5 @@
 import React from 'react'
+import Input from '@material-ui/core/TextField'
 
 class SearchBar extends React.Component {
 
@@ -19,7 +20,7 @@ class SearchBar extends React.Component {
 
     return(
       <form className="search-form" onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Search Username..." />
+        <Input className="search-bar" variant="filled" type="text" placeholder="Search Username..." />
       </form>
     )
 
