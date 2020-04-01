@@ -1,15 +1,15 @@
 import React from 'react'
 
-class Blah extends React.Component {
+class Profile extends React.Component {
 
   render() {
 
     return(
-      <div>Im am Blah</div>
+      <div>Im am Profile!</div>
     )
 
   }
 
 }
 
-export default Blah
+export default Profile
