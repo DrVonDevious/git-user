@@ -1,15 +1,13 @@
 import React from 'react'
 
-class Blah extends React.Component {
+class UserBio extends React.Component {
 
   render() {
-
     return(
-      <div>Im am Blah</div>
+      <p>{this.props.bio}</p>
     )
-
   }
 
 }
 
-export default Blah
+export default UserBio

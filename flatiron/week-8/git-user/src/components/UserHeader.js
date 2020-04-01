@@ -1,15 +1,19 @@
 import React from 'react'
 
-class Blah extends React.Component {
+class UserHeader extends React.Component {
 
   render() {
-
+    console.log("UserHead Props", this.props)
     return(
-      <div>Im am Blah</div>
+      <div>
+        <a href={this.props.link}>
+          <img src={this.props.img_url} alt="Image aint load"></img>
+        </a>
+        <h3> {this.props.name} </h3>
+      </div>
     )
-
   }
 
 }
 
-export default Blah
+export default UserHeader

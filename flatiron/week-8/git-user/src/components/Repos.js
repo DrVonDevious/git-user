@@ -1,15 +1,27 @@
 import React from 'react'
 
-class Blah extends React.Component {
+class Repos extends React.Component {
+
+  getRepos = (url) => {
+    fetch(url)
+    .then(resp => resp.json())
+    .then(repos => {
+      return repos.map(repo => this.showRepo(repo))  
+    })
+  }
+
+  showRepo = (repo) => {
+    debugger
+  }
 
   render() {
-
     return(
-      <div>Im am Blah</div>
+      <div>
+        {this.getRepos(this.props.reposUrl)}
+      </div>
     )
-
   }
 
 }
 
-export default Blah
+export default Repos

@@ -1,15 +1,16 @@
 import React from 'react'
 
-class Blah extends React.Component {
+class SocialInfo extends React.Component {
 
   render() {
-
     return(
-      <div>Im am Blah</div>
+      <div>
+        <div>Followers: {this.props.followers}</div>
+        <div>Following: {this.props.following}</div>
+      </div>
     )
-
   }
 
 }
 
-export default Blah
+export default SocialInfo
