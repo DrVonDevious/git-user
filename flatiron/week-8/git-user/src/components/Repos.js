@@ -11,7 +11,14 @@ class Repos extends React.Component {
   }
 
   showRepo = (repo) => {
-    debugger
+    // debugger
+    return (
+      <div> 
+        <a href={repo.html_url}>
+          <label> {repo.name} </label>
+        </a>
+      </div>
+    )
   }
 
   render() {
